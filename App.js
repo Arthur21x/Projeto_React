@@ -19,15 +19,6 @@ export default class App extends Component{
     });
   }
 
-  searchFunction = (text) => {
-    const updatedData = this.arrayholder.filter((item) => {
-      const item_data = `${item.title.toUpperCase()})`;
-      const text_data = text.toUpperCase();
-      return item_data.indexOf(text_data) > -1;
-    });
-    this.setState({ data: updatedData, searchValue: text });
-  };
-
   render(){
     return(
       <SafeAreaView style={styles.container}>
